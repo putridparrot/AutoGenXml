@@ -16,3 +16,6 @@ AutoGenXml -C c:\dev\person.cs -T Person
 
 This results in an Xml file named &lt;Type&gt;.xml, hence in the example above that would be Person.xml.
 
+Limitations
+
+There's probably a few, as I said at the start of this document, this was originally written for a specific case, but I will try and fix/implement anything that's missing as I come across it, one such limitation is that it currently does not support the "any" element in the XSD.

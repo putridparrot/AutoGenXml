@@ -47,18 +47,20 @@ namespace AutoGenXml
                     {
                         Console.WriteLine("Unable to instantiate type " + arguments.TypeName);
                     }
+                    else
+                    {
+                        var fixture = new Fixture();
 
-                    var fixture = new Fixture();
+                        var createMethod = typeof (SpecimenFactory).
+                            GetMethod("Create", new[] {typeof (ISpecimenBuilder)}).
+                            MakeGenericMethod(o.GetType());
 
-                    var createMethod = typeof(SpecimenFactory).
-                        GetMethod("Create", new[] { typeof(ISpecimenBuilder) }).
-                        MakeGenericMethod(o.GetType());
+                        var populated = createMethod.Invoke(null, new object[] {fixture});
 
-                    var populated = createMethod.Invoke(null, new object[] { fixture });
-
-                    var serializer = new XmlSerializer(populated.GetType());
-                    var writer = new StreamWriter(arguments.TypeName + ".xml");
-                    serializer.Serialize(writer, populated);
+                        var serializer = new XmlSerializer(populated.GetType());
+                        var writer = new StreamWriter(arguments.TypeName + ".xml");
+                        serializer.Serialize(writer, populated);
+                    }
                 }
 
             }

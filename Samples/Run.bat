@@ -1,0 +1,1 @@
+..\AutoGenXml\bin\Debug\AutoGenXml.exe -C %1 -T %2
