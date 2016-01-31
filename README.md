@@ -1,4 +1,4 @@
-AutoGenXml was written for a fairly specific task, which might be use to others (or ofcourse you can fork/copy it in anyway you want to match your requirements. I thought I'd place it on github in case anyone had a use for such a tool.
+AutoGenXml was written for a fairly specific task, which might be use to others (or ofcourse you can fork/copy it in anyway you want to match your requirements). I thought I'd place it on github in case anyone had a use for such a tool.
 
 The source is released under the MIT license.
 
