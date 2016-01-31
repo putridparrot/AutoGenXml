@@ -14,5 +14,5 @@ For example
 
 AutoGenXml -C c:\dev\person.cs -T Person
 
-This results in an Xml file named &lt;Type&rt;.xml, hence in the example above that would be Person.xml.
+This results in an Xml file named &lt;Type&gt;.xml, hence in the example above that would be Person.xml.
 
